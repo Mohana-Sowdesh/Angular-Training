@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+        <input type="text" #textvalue/>
+        <button class="btn btn-primary" (click)="triggerSubmit(textvalue.value)">Add</button><br>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <app-left-box [leftBoxData]="leftContentBox" (someEmitter)="addContentToRight($event)"></app-left-box>
+      </div>
+      <div class="col-sm-3">
+        <button class="btn btn-primary" (click)="pushToRight()">Push to right</button>
+        <button class="btn btn-primary" (click)="pushToLeft()">Push to left</button>
+      </div>
+      <div class="col-sm-3"><app-left-box [leftBoxData]="rightContentBox" (someEmitter)="addContentToLeft($event)"></app-left-box></div>
+    </div>
+  </div>
+</div>

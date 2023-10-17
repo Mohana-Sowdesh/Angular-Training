@@ -1,0 +1,11 @@
+.leftTextBox {
+    margin: 10px 0px;
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+    border: solid 1px black;
+}
+
+div li {
+    padding: 5px;
+}
