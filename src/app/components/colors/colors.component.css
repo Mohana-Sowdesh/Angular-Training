@@ -6,7 +6,7 @@
 }
 
 /* Tick mark CSS */
-.fa-thin {
+.tick-mark {
     color: white;
     font-size: 30px;
     visibility: hidden;
@@ -14,6 +14,6 @@
 }
 
 /* Tick mark styling when it needs to be visible */
-.tickVisible {
+.tick-visible {
     visibility: initial;
 }

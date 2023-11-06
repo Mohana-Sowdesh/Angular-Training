@@ -1,2 +1,4 @@
-<app-mobile [senderName]="senderName" [receiverName]="receiverName" [colourSelected]="senderColour"></app-mobile>
-<app-mobile [senderName]="receiverName" [receiverName]="senderName" [colourSelected]="receiverColour"></app-mobile>
+<div class="container">
+    <app-mobile class="mobile-app-container" [senderName]="senderName" [receiverName]="receiverName"  [colourSelected]="senderColour" (msgSentEmitter)="updateArrays($event)" [chat]="chat"></app-mobile>
+    <app-mobile class="mobile-app-container" [senderName]="receiverName" [receiverName]="senderName" [colourSelected]="receiverColour" (msgSentEmitter)="updateArrays($event)" [chat]="chat"></app-mobile>
+</div>
