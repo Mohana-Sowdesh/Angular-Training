@@ -1,0 +1,139 @@
+.user-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.mobile-view {
+    margin-top: 60px;
+    width: 350px;
+    border-radius: 35px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ----------------- START :: Header ---------------------- */
+.header {
+    display: flex;
+    flex-grow: 0;
+}
+
+.back-arrow {
+    color: rgb(3, 3, 3);
+    font-size: 20px;
+    margin: 25px 10px 5px 15px;
+    cursor: pointer;
+}
+
+.profile-img {
+    margin-top: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.username {
+    margin: 35px 0 0 15px;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(77, 94, 121);
+}
+
+.line {
+    width: 350px;
+    height: 15px;
+    border-bottom: 2.5px solid rgb(243, 243, 243);
+}
+/* ----------------- END :: Header ---------------------- */
+/* ----------------- START :: Chat space ---------------------- */
+.chat-space {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: scroll;
+    height: 520px;
+}
+
+.no-chat-data {
+    margin: auto;
+    color: rgb(176, 175, 175);
+}
+
+.received {
+    margin: 10px 0 0 20px;
+    width: 150px;
+    padding: 15px 15px 10px 20px;
+    background-color: #f2f2f2;
+    border-radius: 50px 50px 50px 0px;
+    text-overflow: clip;
+    font-size: 13px;
+    color: rgb(157, 157, 157);
+    word-wrap: break-word;
+}
+
+.received-time {
+    margin: 10px 0 0 20px;
+    font-size: 10px;
+    color: rgb(204, 202, 202);
+}
+
+.sent-time {
+    margin: 10px 0 0 280px;
+    font-size: 10px;
+    color: rgb(204, 202, 202);
+}
+
+.sent {
+    margin: 10px 20px 0 170px;
+    width: 150px;
+    padding: 12px 10px 10px 20px;
+    border-radius: 50px 50px 0px 50px;
+    text-overflow: clip;
+    font-size: 13px;
+    color: white;
+    word-wrap: break-word;
+}   
+/* ----------------- END :: Chat space ---------------------- */
+/* ----------------- START :: Message input ---------------------- */
+.message-content {
+    margin: 25px;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+    outline: rgb(23, 22, 22);
+    flex-grow: 0;
+}
+
+.msg-input {
+    width: 240px;
+    height: 30px;
+    margin-left: 15px;
+    background-color: rgb(245, 245, 245);
+    border: none;
+    outline: none;
+}
+
+.send-icon {
+    font-size: 35px;
+    cursor: pointer;
+}
+/* ----------------- END :: Message input ---------------------- */
+/* ----------------- START :: Colour palette ---------------------- */
+.color-palette {
+    margin: 60px 0 113px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+    cursor: pointer;
+}
+/* ----------------- END :: Colour palette ---------------------- */
