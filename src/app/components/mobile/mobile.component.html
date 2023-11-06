@@ -1,0 +1,38 @@
+<div class="user-container" [ngStyle]="{'background-color': colourSelected}">
+    <div class="mobile-view">
+        <!-- Header -->
+        <div class="header">
+            <i class="fa-solid fa-chevron-down fa-rotate-90"></i>
+            <img src="../../../assets/images/profile img.avif" alt="profile image" class="profile-img"/>
+            <span class="username">{{ senderName }}</span>
+        </div>
+        <div class="line"></div>
+        <!-- Chat space -->
+        <div class="chat-space">
+            <ng-container *ngIf="chatData[senderName][receiverName].length !== 0; else noChatData">
+                <div *ngFor="let message of chatData[senderName][receiverName]">
+                    <div [ngClass]="message.isSent ? 'sent' : 'received'" [ngStyle]="{backgroundColor: message.isSent ? colourSelected : '#f2f2f2'}">
+                        {{ message.message}}    
+                    </div>
+                    <div [ngClass]="message.isSent ? 'sent-time' : 'received-time'">
+                        {{ message.timestamp}}
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #noChatData>
+                <div class="no-chat-data">Type to get started</div>
+            </ng-template>
+        </div>
+        <!-- Message input -->
+        <div class="message-content">
+            <input type="text" class="msg-input" placeholder="Message..." [(ngModel)]="textInput">
+            <i class="fa-brands fa-telegram" [ngStyle]="{'color': colourSelected}" (click)="updateArrays()"></i>
+        </div>
+    </div>
+     <!-- Colour palette -->
+     <div  class="color-palette">
+        <div *ngFor="let colour of colourList">
+            <app-colors [colourList]="colourList" [colorObj]="colour" (colorSelectedTracker)="onColorSelection($event)"></app-colors>
+        </div>
+    </div>
+</div>

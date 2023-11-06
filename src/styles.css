@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+/*Universal css to start at 0,0*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+    font-family: 'Roboto', sans-serif;
+}
+
+/* :root {
+    --main-color: #4e4e6c;
+} */

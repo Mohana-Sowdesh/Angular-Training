@@ -1,0 +1,19 @@
+/* Styling for colour div */
+.colour {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Tick mark CSS */
+.fa-thin {
+    color: white;
+    font-size: 30px;
+    visibility: hidden;
+    z-index: -1;
+}
+
+/* Tick mark styling when it needs to be visible */
+.tickVisible {
+    visibility: initial;
+}
