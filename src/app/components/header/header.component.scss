@@ -1,0 +1,27 @@
+.header-container {
+    margin-bottom: 20px;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.welcome-msg {
+    margin: 20px 100px 0 0;
+    font-size: 22px;
+}
+
+.search-box-styling {
+    margin: 0 20px 0 55px;
+}
+
+// @media only screen and (max-width: 900px) {
+//     .welcome-msg {
+//         width: 100%;
+//     }
+
+//     .header-container {
+//         background-color: aquamarine;
+//         display: inline-block;
+//     }
+// }

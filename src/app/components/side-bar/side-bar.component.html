@@ -1,5 +1,5 @@
 <div class="menu-bar">
-   <img src="../../../assets/images/Logo.png" alt="Logo" class="logo">
+   <img [src]='logoImgPath' alt="Logo" class="logo">
    <div class="menu-list">
         <div *ngFor="let menu of menuList">{{ menu }}</div>
    </div>
