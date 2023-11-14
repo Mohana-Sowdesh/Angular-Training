@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SHOPPING_CART_IMG_PATH } from 'src/app/constants/app-constants';
+import APP_CONSTANTS from 'src/app/constants/app-constants';
 
 @Component({
   selector: 'li-shopping-cart',
@@ -8,5 +8,5 @@ import { SHOPPING_CART_IMG_PATH } from 'src/app/constants/app-constants';
 })
 
 export class ShoppingCartComponent {
-  public shoppingCartImgPath: string = SHOPPING_CART_IMG_PATH;
+  public shoppingCartImgPath: string = APP_CONSTANTS.SHOPPING_CART_IMG_PATH;
 }

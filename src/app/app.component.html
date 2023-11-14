@@ -1,10 +1,95 @@
 <div class="background-container">
+  <!----------------- START :: Inner container ---------------------->
   <div class="inner-container">
     <li-side-bar class="side-bar"></li-side-bar>
+    <!----------------- START :: Main stage container ---------------------->
     <div class="main-stage-container">
       <li-header [userName]="userName"></li-header>
       <li-banner></li-banner>
       <li-badge></li-badge>
+      
+      <div class="courses-container">
+        <div class="courses-heading">Trending Courses</div>
+        <div class="course-list-container">
+          <swiper-container navigation="true" slides-per-view="5"> 
+            <swiper-slide>
+                <li-course></li-course>
+            </swiper-slide>
+            <swiper-slide>
+              <li-course></li-course>
+            </swiper-slide>
+            <swiper-slide>
+              <li-course></li-course>
+            </swiper-slide>
+            <swiper-slide>
+              <li-course></li-course>
+            </swiper-slide>
+            <swiper-slide>
+              <li-course></li-course>
+            </swiper-slide>
+            <swiper-slide>
+              <li-course></li-course>
+            </swiper-slide>
+            <swiper-slide>
+              <li-course></li-course>
+            </swiper-slide>
+        </swiper-container>
+          <!-- <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="myConfig">
+            <div ngxSlickItem class="slide">
+              <li-course></li-course>
+            </div>
+            <div ngxSlickItem class="slide">
+              <li-course></li-course>
+            </div>
+            <div ngxSlickItem class="slide">
+              <li-course></li-course>
+            </div>
+            <div ngxSlickItem class="slide">
+              <li-course></li-course>
+            </div>
+            <div ngxSlickItem class="slide">
+              <li-course></li-course>
+            </div>
+            <div ngxSlickItem class="slide">
+              <li-course></li-course>
+            </div>
+            <div ngxSlickItem class="slide">
+              <li-course></li-course>
+            </div>
+          </ngx-slick-carousel> -->
+        </div>
+
+        <div class="courses-container-1">
+          <div class="courses-heading">Recommended for you</div>
+          <div class="course-list-container-1">
+            <swiper-container navigation="true" slides-per-view="5"> 
+              <swiper-slide>
+                  <li-course></li-course>
+              </swiper-slide>
+              <swiper-slide>
+                <li-course></li-course>
+              </swiper-slide>
+              <swiper-slide>
+                <li-course></li-course>
+              </swiper-slide>
+              <swiper-slide>
+                <li-course></li-course>
+              </swiper-slide>
+              <swiper-slide>
+                <li-course></li-course>
+              </swiper-slide>
+              <swiper-slide>
+                <li-course></li-course>
+              </swiper-slide>
+              <swiper-slide>
+                <li-course></li-course>
+              </swiper-slide>
+          </swiper-container>
+        </div>
+
+      </div>
     </div>
   </div>
+  <!----------------- END :: Main stage container ---------------------->
+  <!----------------- END :: Inner container ---------------------->
 </div>

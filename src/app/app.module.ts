@@ -12,6 +12,10 @@ import { ProfileImgComponent } from './components/profile-img/profile-img.compon
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { BadgeComponent } from './components/badge/badge.component';
+import { CourseComponent } from './components/course/course.component';
+import { CommonModule } from '@angular/common';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,11 +26,15 @@ import { BadgeComponent } from './components/badge/badge.component';
     ProfileImgComponent,
     ShoppingCartComponent,
     BannerComponent,
-    BadgeComponent
+    BadgeComponent,
+    CourseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
+    SlickCarouselModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

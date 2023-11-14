@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LOGO_IMG_PATH } from 'src/app/constants/app-constants';
+import APP_CONSTANTS from 'src/app/constants/app-constants';
 
 @Component({
   selector: 'li-side-bar',
@@ -7,6 +7,6 @@ import { LOGO_IMG_PATH } from 'src/app/constants/app-constants';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent {
-  public logoImgPath: string = LOGO_IMG_PATH;
+  public logoImgPath: string = APP_CONSTANTS.LOGO_IMG_PATH;
   public menuList:string[] = ['Dashboard', 'Explore courses', 'My courses', 'Notes', 'Settings'];
 }

@@ -1,9 +1,14 @@
 .header-container {
     margin-bottom: 20px;
+//     position: fixed;
+//     top: 10px;
+//     left: 310px;
+//   right: 0;
     padding: 0 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    // z-index: 10000;
 }
 
 .welcome-msg {

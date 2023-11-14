@@ -29,12 +29,49 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: scroll;
 }
 
 li-banner {
     width: 100%;
 }
 /* ----------------- END :: Container styles ---------------------- */
+
+.courses-container, .courses-container-1 {
+    width: 100%;
+    padding: 0 45px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.courses-heading {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2d2c2c;
+}
+
+.course-list-container, .course-list-container-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-next, .swiper-button-previous {
+    top: -50px;
+    color: black;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black !important;
+}
 
 // @media only screen and (max-width: 1040px) {
 //     .inner-container {
