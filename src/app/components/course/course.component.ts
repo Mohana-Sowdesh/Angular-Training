@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import APP_CONSTANTS from 'src/app/constants/app-constants';
+import { CourseDetails } from 'src/app/models/course-details.model';
 
 @Component({
   selector: 'li-course',
@@ -8,4 +9,6 @@ import APP_CONSTANTS from 'src/app/constants/app-constants';
 })
 export class CourseComponent {
   public profileImgPath: string = APP_CONSTANTS.PROFILE_IMG_PATH;
+  @Input() course!: CourseDetails;
+
 }

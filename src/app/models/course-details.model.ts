@@ -1,8 +1,10 @@
 export interface CourseDetails {
+    courseId: number,
     courseImgLink: string,
     courseTitle: string,
     courseRating: string,
     courseInstructorName: string,
-    coursePrice: string,
+    coursePrice: number,
     backgroundColor: string,
+    tags: string[]
 }

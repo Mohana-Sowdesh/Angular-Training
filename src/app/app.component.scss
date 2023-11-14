@@ -24,20 +24,27 @@
 }
 
 .main-stage-container {
-    padding: 30px 0;
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: scroll;
 }
+/* ----------------- END :: Container styles ---------------------- */
+li-header {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background-color: white;
+}
 
 li-banner {
     width: 100%;
 }
-/* ----------------- END :: Container styles ---------------------- */
 
-.courses-container, .courses-container-1 {
+/* ----------------- START :: Course styles ---------------------- */
+.courses-container {
+    margin-bottom: 40px;
     width: 100%;
     padding: 0 45px;
     display: flex;
@@ -45,19 +52,36 @@ li-banner {
     flex-wrap: wrap;
 }
 
-.courses-heading {
-    font-size: 16px;
-    font-weight: 600;
+.courses-heading-container {
+    display: flex;
+    justify-content: space-between;
     color: #2d2c2c;
 }
 
-.course-list-container, .course-list-container-1 {
+.course-heading {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.slider-navigation-arrow {
+    margin: 0 5px;
+    color: #2d2c2c;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.course-list-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
+.course-container {
+    width: 20%;
+}
+/* ----------------- END :: Course styles ---------------------- */
 
 swiper-container {
     width: 100%;
@@ -72,13 +96,3 @@ swiper-container {
 .slick-prev:before, .slick-next:before {
     color: black !important;
 }
-
-// @media only screen and (max-width: 1040px) {
-//     .inner-container {
-//         flex-direction: column;
-//     }
-
-//     .side-bar {
-//       width: 95%;
-//     }
-// }
