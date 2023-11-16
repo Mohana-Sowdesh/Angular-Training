@@ -14,8 +14,8 @@ import { BannerComponent } from './components/banner/banner.component';
 import { BadgeComponent } from './components/badge/badge.component';
 import { CourseComponent } from './components/course/course.component';
 import { CommonModule } from '@angular/common';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { HttpClientModule } from '@angular/common/http';
+import { CoursesContainerComponent } from './components/courses-container/courses-container.component';
 
 @NgModule({
   declarations: [
@@ -27,13 +27,13 @@ import { HttpClientModule } from '@angular/common/http';
     ShoppingCartComponent,
     BannerComponent,
     BadgeComponent,
-    CourseComponent
+    CourseComponent,
+    CoursesContainerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    SlickCarouselModule,
     HttpClientModule
   ],
   providers: [],

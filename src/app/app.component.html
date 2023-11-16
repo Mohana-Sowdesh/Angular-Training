@@ -6,22 +6,28 @@
     <div class="main-stage-container">
       <li-header [userName]="userName"></li-header>
       <li-banner></li-banner>
-      <li-badge></li-badge>
-      
-      <div class="courses-container">
+      <li-badge ></li-badge>
+      <li-courses-container [courseHeading]="'Trending courses'" [courseDetailsData]="trendingCourseDetailsData"></li-courses-container>
+      <li-courses-container [courseHeading]="'Recommended for you'" [courseDetailsData]="recommendedCourseDetailsData"></li-courses-container>
+      <!-- <div class="courses-container">
         <div class="courses-heading-container">
           <div class="courses-heading">Trending Courses</div>
           <div>
-            <i class="fa-solid fa-chevron-up fa-rotate-270 slider-navigation-arrow"></i>
-            <i class="fa-solid fa-chevron-up fa-rotate-90 slider-navigation-arrow"></i>
+            <i class="fa-solid fa-chevron-up fa-rotate-270 slider-navigation-arrow slider-prev-navigation-arrow" (click)="!courseDetailsData.trending.disablePrevButton && onPrevClick(trendingCoursesCurrentPage, trendingCoursesPageSize, courseDetailsData.trending)" [class.disabled]="courseDetailsData.trending.disablePrevButton"></i>
+              <i class="fa-solid fa-chevron-up fa-rotate-90 slider-navigation-arrow slider-next-navigation-arrow" (click)=" !courseDetailsData.trending.disableNextButton && onNextClick(trendingCoursesCurrentPage, trendingCoursesPageSize, courseDetailsData.trending)" [class.disabled]="courseDetailsData.trending.disableNextButton"></i>
           </div>
         </div>
         <div class="course-list-container">
-          <swiper-container slides-per-view="5"> 
+          <div class="course-container" *ngFor="let singleCourse of courseDetailsData.trending.toShow">
+            <li-course [course]="singleCourse"></li-course>
+          </div>
+        </div>
+      </div>  -->
+          <!-- <swiper-container slides-per-view="5"> 
             <swiper-slide *ngFor="let singleCourse of courseDetailsData">
                   <li-course [course]="singleCourse"></li-course>
             </swiper-slide>
-          </swiper-container>
+          </swiper-container> -->
           <!-- <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="myConfig">
             <div ngxSlickItem class="slide">
               <li-course></li-course>
@@ -45,21 +51,21 @@
               <li-course></li-course>
             </div>
           </ngx-slick-carousel> -->
-        </div>
-      </div>
 
-        <div class="courses-container">
+
+        <!-- <div class="courses-container">
           <div class="courses-heading-container">
             <div class="courses-heading">Recommended for you</div>
             <div>
-              <i class="fa-solid fa-chevron-up fa-rotate-270 slider-navigation-arrow slider-prev-navigation-arrow" #prev (click)="onPrevClick()"></i>
-              <i class="fa-solid fa-chevron-up fa-rotate-90 slider-navigation-arrow slider-next-navigation-arrow" #next (click)="onNextClick()"></i>
+              <i class="fa-solid fa-chevron-up fa-rotate-270 slider-navigation-arrow slider-prev-navigation-arrow" (click)="onPrevClick(recommendedCoursesCurrentPage, recommendedCoursesPageSize, courseDetailsData.recommended)"></i>
+              <i class="fa-solid fa-chevron-up fa-rotate-90 slider-navigation-arrow slider-next-navigation-arrow" (click)="onNextClick(recommendedCoursesCurrentPage, recommendedCoursesPageSize, courseDetailsData.recommended)"></i>
             </div>
           </div>
           <div class="course-list-container">
-            <div class="course-container" *ngFor="let singleCourse of courseDetailsDataToShow">
+            <div class="course-container" *ngFor="let singleCourse of courseDetailsData.recommended.toShow">
               <li-course [course]="singleCourse"></li-course>
             </div>
+          </div> -->
               <!-- <swiper-container slides-per-view="5" class="recommended-courses"> 
               <swiper-slide *ngFor="let singleCourse of courseDetailsData">
                   <li-course [course]="singleCourse"></li-course>
@@ -68,11 +74,10 @@
                 <div>ljscdldsc</div>
               </div>
           </swiper-container> -->
-        </div>
+        
 
       </div>
     </div>
   </div>
   <!----------------- END :: Main stage container ---------------------->
   <!----------------- END :: Inner container ---------------------->
-</div>

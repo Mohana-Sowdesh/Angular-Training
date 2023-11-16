@@ -42,6 +42,10 @@ li-banner {
     width: 100%;
 }
 
+li-courses-container {
+    width: 100%;
+}
+
 /* ----------------- START :: Course styles ---------------------- */
 .courses-container {
     margin-bottom: 40px;
@@ -63,6 +67,11 @@ li-banner {
     font-weight: 600;
 }
 
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .slider-navigation-arrow {
     margin: 0 5px;
     color: #2d2c2c;
@@ -77,10 +86,6 @@ li-banner {
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-
-.course-container {
-    width: 20%;
-}
 /* ----------------- END :: Course styles ---------------------- */
 
 swiper-container {
@@ -88,11 +93,11 @@ swiper-container {
     height: 100%;
 }
 
-.swiper-button-next, .swiper-button-previous {
-    top: -50px;
-    color: black;
-}
+// .swiper-button-next, .swiper-button-previous {
+//     top: -50px;
+//     color: black;
+// }
 
-.slick-prev:before, .slick-next:before {
-    color: black !important;
-}
+// .slick-prev:before, .slick-next:before {
+//     color: black !important;
+// }
