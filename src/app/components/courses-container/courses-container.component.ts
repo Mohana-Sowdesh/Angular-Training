@@ -1,6 +1,7 @@
-import { AfterContentInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CourseDetails } from 'src/app/models/course-details.model';
 import { CoursesDataService } from 'src/app/services/courses-data.service';
+import APP_MESSAGES from 'src/app/constants/app-messages';
 
 @Component({
   selector: 'li-courses-container',
@@ -17,6 +18,7 @@ export class CoursesContainerComponent implements OnInit {
   public disableNextButton: boolean = false;
   public filterTags: string[] = [];
   public searchKey: string = '';
+  public noResultFoundMsg: string = APP_MESSAGES.NO_RESULT_FOUND;
 
   constructor(private coursesDataService: CoursesDataService ) {
   }
@@ -26,7 +28,6 @@ export class CoursesContainerComponent implements OnInit {
                           .subscribe((courses) => { 
                             this.courseDetailsData = courses;
                             this.updateDisplayedData();
-                            // console.log(this.courseDetailsData);
                           });
     this.coursesDataService.filterTags.asObservable()
                           .subscribe((tags) => {
@@ -36,15 +37,15 @@ export class CoursesContainerComponent implements OnInit {
     this.coursesDataService.searchKey.asObservable()
                           .subscribe((_searchKey) => {
                               this.searchKey = _searchKey;
-                              console.log(this.searchKey);  
                               this.updateDisplayedData();
                           })
   }
 
-  private updateDisplayedData() {
+  /**
+   * Filters based on the search key and selected badges. Applies pagination logic on the filtered output
+   */
+  private updateDisplayedData(): void {
     const startIndex = this.currentPage * this.pageSize;
-    // console.log(this.filterTags);
-    console.log(this.searchKey);
     
     this.courseDetailsDataToShow = this.courseDetailsData.filter((course) => 
                                               this.filterTags.length === 0 ||
@@ -53,25 +54,36 @@ export class CoursesContainerComponent implements OnInit {
                                         this.searchKey.length === 0 || (course.courseInstructorName.toLowerCase().includes(this.searchKey) || course.courseTitle.toLowerCase().includes(this.searchKey))
                                       )
                                       .slice(startIndex, startIndex + this.pageSize);
-    // console.log(this.courseDetailsDataToShow);
-    // console.log(this.courseDetailsData);
+
     
     const totalPages = Math.ceil(this.courseDetailsData.length / this.pageSize);
     this.disablePrevButton = this.currentPage === 0;
     this.disableNextButton = this.currentPage >= totalPages - 1;
   }
 
-  onNextClick() {
+  /**
+   * Function triggred when next page is clicked where the current page value is incremented
+   */
+  onNextClick(): void {
     this.currentPage++;
     this.updateDisplayedData();
   }
 
-  onPrevClick() {
+  /**
+   * Function triggred when previous page is clicked where the current page value is decremented
+   */
+  onPrevClick(): void {
     this.currentPage = Math.max(0, this.currentPage - 1);
     this.updateDisplayedData();
   }
 
-  private getCommonTags(tagList1: string[], tagList2: string[]) {
+  /**
+   * Function to check if the iterating course tags are matching with the badges selected by the user
+   * @param tagList1 - Tag list of the currently iterating course
+   * @param tagList2 - Badges array consisting of the badges selected by the user
+   * @returns - String array which contains common tags between tagList1 and tagList2
+   */
+  private getCommonTags(tagList1: string[], tagList2: string[]): string[] {
     const set1 = new Set(tagList1.map((tag) => tag.toLowerCase()));
     const set2 = new Set(tagList2.map((tag) => tag.toLowerCase()));
 

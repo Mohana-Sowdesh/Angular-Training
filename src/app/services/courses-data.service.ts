@@ -15,15 +15,14 @@ export class CoursesDataService {
   constructor(private http: HttpClient) { 
   }
 
+  /**
+   * Function to fetch data from mock API
+   */
   fetchCourses(): void {
      this.http
       .get<CourseDetails[]>(APP_CONSTANTS.TRENDING_COURSE_DETAILS_MOCK_API)
       .subscribe((courses) => {
         this.courseDetailsData.next(courses);
     });
-  }
-
-  setCourses(courses: CourseDetails[]) {
-    this.courseDetailsData.next(courses);
   }
 }

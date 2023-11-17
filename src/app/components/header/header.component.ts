@@ -8,5 +8,5 @@ import APP_MESSAGES from 'src/app/constants/app-messages';
 })
 export class HeaderComponent {
   @Input() userName!: string;
-  public welcomeMsg = APP_MESSAGES.WELCOME_MSG;
+  public welcomeMsg: string = APP_MESSAGES.WELCOME_MSG;
 }

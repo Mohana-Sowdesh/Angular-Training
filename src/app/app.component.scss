@@ -42,6 +42,12 @@ li-banner {
     width: 100%;
 }
 
+li-badge {
+    width: 93%;
+    margin: 0 40px;
+    // padding: 0 10px;
+}
+
 li-courses-container {
     width: 100%;
 }
@@ -88,3 +94,7 @@ li-courses-container {
 }
 /* ----------------- END :: Course styles ---------------------- */
 
+// Style to hide scrollbar
+::-webkit-scrollbar {
+    display: none;
+}

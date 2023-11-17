@@ -1,8 +1,5 @@
-import { Component, ElementRef, OnInit } from "@angular/core";
-import { CourseDetails } from "./models/course-details.model";
-import { HttpClient } from "@angular/common/http";
+import { Component, ElementRef } from "@angular/core";
 import APP_CONSTANTS from "src/app/constants/app-constants";
-import Swiper from "swiper";
 import { CoursesDataService } from "./services/courses-data.service";
  
 @Component({
@@ -12,7 +9,7 @@ import { CoursesDataService } from "./services/courses-data.service";
 })
 
 export class AppComponent {
-  public userName: string = "Mouni";
+  public userName: string = APP_CONSTANTS.USERNAME;
 
   constructor(private el: ElementRef, private coursesData: CoursesDataService) {}
 

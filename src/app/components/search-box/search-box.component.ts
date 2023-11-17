@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import APP_MESSAGES from 'src/app/constants/app-messages';
 import { CoursesDataService } from 'src/app/services/courses-data.service';
+
 @Component({
   selector: 'li-search-box',
   templateUrl: './search-box.component.html',
@@ -12,11 +13,16 @@ export class SearchBoxComponent {
 
   constructor(private courseDataService: CoursesDataService) {}
 
-  onKeyPress(keyEvent: KeyboardEvent, event: Event) {
+  /**
+   * Function triggered when input is updated in search bar. On 'Enter', search value is assigned to
+   * searchKey variable in courseDataService
+   * @param keyEvent - Event details on key press
+   * @param event - Event details
+   */
+  onKeyPress(keyEvent: KeyboardEvent, event: Event): void {
     this.searchKey = (<HTMLInputElement>event.target).value;
-    console.log(keyEvent.key);
-    
-    if(keyEvent.key == 'Enter' && this.searchKey.trim() !='') {
+ 
+    if(keyEvent.key == 'Enter') {
       this.courseDataService.searchKey.next(this.searchKey.trim().toLowerCase());
     }
   }

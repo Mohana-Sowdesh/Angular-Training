@@ -8,5 +8,5 @@ import APP_CONSTANTS from 'src/app/constants/app-constants';
 })
 export class SideBarComponent {
   public logoImgPath: string = APP_CONSTANTS.LOGO_IMG_PATH;
-  public menuList:string[] = ['Dashboard', 'Explore courses', 'My courses', 'Notes', 'Settings'];
+  public menuList: string[] = APP_CONSTANTS.MENU_LIST;
 }

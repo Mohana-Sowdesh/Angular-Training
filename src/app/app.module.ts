@@ -16,6 +16,7 @@ import { CourseComponent } from './components/course/course.component';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { CoursesContainerComponent } from './components/courses-container/courses-container.component';
+import { CardItemComponent } from './components/card-item/card-item.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CoursesContainerComponent } from './components/courses-container/course
     BannerComponent,
     BadgeComponent,
     CourseComponent,
-    CoursesContainerComponent
+    CoursesContainerComponent,
+    CardItemComponent
   ],
   imports: [
     BrowserModule,

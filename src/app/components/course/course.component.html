@@ -19,7 +19,7 @@
             </div>
             <div class="course-price">{{ course.coursePrice | currency:'USD':'symbol': '1.1-1' }}</div>
         </div>
-        <div class="add-to-cart-btn">ADD TO CART</div>
+        <div class="add-to-cart-btn" (click)="addToCart()">ADD TO CART</div>
     </div>
 </div>
 
