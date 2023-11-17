@@ -1,12 +1,14 @@
-.container {
+.banner-container {
     padding: 0 40px;
 }
 
+// Style for the banner image present in swiper-slide
 swiper-slide > img {
     width: 100%;
     height: 100%;
 }
 
+/* ----------------- START :: Styling for pagination bullet present in swiper-slide ---------------------- */
 swiper-container::part(bullet-active) {
     background-color: rgb(92, 124, 68);
 }
@@ -14,37 +16,5 @@ swiper-container::part(bullet-active) {
 swiper-container::part(bullet) {
     background-color: white;
 }
-
-// .dummy  {
-//     .swiper-pagination-bullet-active {
-//         background: blueviolet !important;
-//     }
-// }
-
-// .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
-//     background-color: blueviolet !important;
-// }
-// .swiper-pagination-bullet {
-//     background: white !important;
-// }
-
-// .swiper-pagination-bullet-active {
-//     background: white !important; 
-// }
-
-// .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-//     background: rgb(251, 255, 0);
-//   }
-  
-// .swiper-pagination-bullet-active {
-//     background: rgb(92, 124, 68);
-// }
-
-// .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-//     background: rgb(124, 68, 75) !important;
-// }
-
-// .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-//     background: ;
-// }
+/* ----------------- END :: Styling for pagination bullet present in swiper-slide ---------------------- */
 

@@ -1,15 +1,15 @@
 .badges-container {
     margin: 20px 0;
-    padding: 0 40px;
+    padding: 0 30px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     row-gap: 5px;
     flex-wrap: wrap;
 }
 
 .badge {
-    margin: 0 20px 0 0;
+    margin: 0 15px 0 0;
     padding: 8px 15px;
     font-size: 15px;
     border-radius: 20px;
@@ -17,7 +17,7 @@
     background-color: rgb(244, 245, 239);
 }
 
-.badge:hover{
+.badge:hover, .selected-badge {
     cursor: pointer;
     background-color: rgb(199, 214, 182);
 }
