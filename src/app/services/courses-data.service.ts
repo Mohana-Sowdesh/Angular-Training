@@ -20,15 +20,7 @@ export class CoursesDataService {
    * Function to fetch data from mock API
    */
   fetchCourses() {
-    //  this.http
-    //   .get<CourseDetails[]>(APP_CONSTANTS.TRENDING_COURSE_DETAILS_MOCK_API)
-    //   .subscribe((courses) => {
-    //     this.courseDetailsData.next(courses);
-    // });
     let courseDetailsObservable = this.apiService.fetchDataFromAPI(APP_CONSTANTS.TRENDING_COURSE_DETAILS_MOCK_API);
     courseDetailsObservable.subscribe((courses) => this.courseDetailsData.next(courses));
-    console.log(this.courseDetailsData);
-    
-    // this.courseDetailsData.next(courseDetails);
   }
 }
