@@ -7,6 +7,6 @@ import APP_CONSTANTS from 'src/app/constants/app-constants';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent {
-  public logoImgPath: string = APP_CONSTANTS.LOGO_IMG_PATH;
-  public menuList: string[] = APP_CONSTANTS.MENU_LIST;
+  readonly logoImgPath: string = APP_CONSTANTS.LOGO_IMG_PATH;
+  readonly menuList: string[] = APP_CONSTANTS.MENU_LIST;
 }

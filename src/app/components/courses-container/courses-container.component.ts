@@ -1,14 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { CourseDetails } from 'src/app/models/course-details.model';
 import { CoursesDataService } from 'src/app/services/courses-data.service';
 import APP_MESSAGES from 'src/app/constants/app-messages';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'li-courses-container',
   templateUrl: './courses-container.component.html',
   styleUrls: ['./courses-container.component.scss']
 })
-export class CoursesContainerComponent implements OnInit {
+export class CoursesContainerComponent implements OnInit, OnDestroy {
   @Input() courseHeading!: string;
   public courseDetailsData!: CourseDetails[];
   public currentPage: number = 0;
@@ -16,29 +17,38 @@ export class CoursesContainerComponent implements OnInit {
   public courseDetailsDataToShow!: CourseDetails[];
   public disablePrevButton: boolean = false;
   public disableNextButton: boolean = false;
-  public filterTags: string[] = [];
+  public filterTags: number[] = [];
   public searchKey: string = '';
-  public noResultFoundMsg: string = APP_MESSAGES.NO_RESULT_FOUND;
+  public coursesSubscription !: Subscription;
+  public tagsSubscription !: Subscription;
+  public searchKeySubscription !: Subscription;
+  readonly noResultFoundMsg: string = APP_MESSAGES.NO_RESULT_FOUND;
 
   constructor(private coursesDataService: CoursesDataService ) {
   }
 
   ngOnInit(): void {
-    this.coursesDataService.courseDetailsData.asObservable()
-                          .subscribe((courses) => { 
-                            this.courseDetailsData = courses;
-                            this.updateDisplayedData();
-                          });
-    this.coursesDataService.filterTags.asObservable()
-                          .subscribe((tags) => {
-                              this.filterTags = tags; 
-                              this.updateDisplayedData();                     
-                          });
-    this.coursesDataService.searchKey.asObservable()
-                          .subscribe((_searchKey) => {
-                              this.searchKey = _searchKey;
-                              this.updateDisplayedData();
-                          })
+    this.coursesSubscription = this.coursesDataService.courseDetailsData.asObservable()
+                                  .subscribe((courses) => { 
+                                    this.courseDetailsData = courses;
+                                    this.updateDisplayedData();
+                                  });
+    this.tagsSubscription = this.coursesDataService.filterTags.asObservable()
+                                .subscribe((tags) => {
+                                    this.filterTags = tags; 
+                                    this.updateDisplayedData();                     
+                                });
+    this.searchKeySubscription = this.coursesDataService.searchKey.asObservable()
+                                  .subscribe((_searchKey) => {
+                                      this.searchKey = _searchKey;
+                                      this.updateDisplayedData();
+                                  });
+  }
+
+  ngOnDestroy(): void {
+    this.coursesSubscription.unsubscribe();
+    this.tagsSubscription.unsubscribe();
+    this.searchKeySubscription.unsubscribe();
   }
 
   /**
@@ -49,13 +59,12 @@ export class CoursesContainerComponent implements OnInit {
     
     this.courseDetailsDataToShow = this.courseDetailsData.filter((course) => 
                                               this.filterTags.length === 0 ||
-                                              this.getCommonTags(course.tags, this.filterTags).length == this.filterTags.length
+                                              this.filterTags.every(tag => course.tags.includes(tag))
                                       ).filter((course) => 
                                         this.searchKey.length === 0 || (course.courseInstructorName.toLowerCase().includes(this.searchKey) || course.courseTitle.toLowerCase().includes(this.searchKey))
                                       )
                                       .slice(startIndex, startIndex + this.pageSize);
 
-    
     const totalPages = Math.ceil(this.courseDetailsData.length / this.pageSize);
     this.disablePrevButton = this.currentPage === 0;
     this.disableNextButton = this.currentPage >= totalPages - 1;
@@ -75,23 +84,5 @@ export class CoursesContainerComponent implements OnInit {
   onPrevClick(): void {
     this.currentPage = Math.max(0, this.currentPage - 1);
     this.updateDisplayedData();
-  }
-
-  /**
-   * Function to check if the iterating course tags are matching with the badges selected by the user
-   * @param tagList1 - Tag list of the currently iterating course
-   * @param tagList2 - Badges array consisting of the badges selected by the user
-   * @returns - String array which contains common tags between tagList1 and tagList2
-   */
-  private getCommonTags(tagList1: string[], tagList2: string[]): string[] {
-    const set1 = new Set(tagList1.map((tag) => tag.toLowerCase()));
-    const set2 = new Set(tagList2.map((tag) => tag.toLowerCase()));
-
-    let resultSet = [];
-    for(const set1Element of set1) {
-      if(set2.has(set1Element))
-        resultSet.push(set1Element);
-    }
-    return resultSet;
   }
 }

@@ -1,5 +1,6 @@
 import { Component, ElementRef } from "@angular/core";
 import APP_CONSTANTS from "src/app/constants/app-constants";
+import APP_MESSAGES from "src/app/constants/app-messages";
 import { CoursesDataService } from "./services/courses-data.service";
  
 @Component({
@@ -9,9 +10,11 @@ import { CoursesDataService } from "./services/courses-data.service";
 })
 
 export class AppComponent {
-  public userName: string = APP_CONSTANTS.USERNAME;
+  readonly userName: string = APP_CONSTANTS.USERNAME;
+  readonly trendingCoursesTitle = APP_MESSAGES.TRENDING_COURSES_TITLE;
+  readonly recommendedForYouTitle = APP_MESSAGES.RECOMMENDED_FOR_YOU_TITLE;
 
-  constructor(private el: ElementRef, private coursesData: CoursesDataService) {}
+  constructor(private coursesData: CoursesDataService) {}
 
   ngOnInit() {
     this.coursesData.fetchCourses();

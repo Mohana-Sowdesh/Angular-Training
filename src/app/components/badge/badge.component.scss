@@ -1,4 +1,7 @@
+@import "../../../styles.scss";
+
 .badges-container {
+    @include hide-scrollbar();
     margin: 20px 0;
     display: flex;
     flex-basis: 50%;

@@ -7,3 +7,10 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
+
+// Style to hide scrollbar
+@mixin hide-scrollbar() {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}

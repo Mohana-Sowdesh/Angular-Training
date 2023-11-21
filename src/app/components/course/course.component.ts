@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import APP_CONSTANTS from 'src/app/constants/app-constants';
 import { CartArrayElement } from 'src/app/models/cart-array-element.model';
 import { CourseDetails } from 'src/app/models/course-details.model';
@@ -10,18 +11,23 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./course.component.scss']
 })
 
-export class CourseComponent implements OnInit{
+export class CourseComponent implements OnInit, OnDestroy {
   @Input() course!: CourseDetails;
-  public profileImgPath: string = APP_CONSTANTS.PROFILE_IMG_PATH;
+  readonly profileImgPath: string = APP_CONSTANTS.PROFILE_IMG_PATH;
   public cartArray: CartArrayElement[] = [];
+  public cartArraySubscription!: Subscription;
 
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.cartService.cartArray.asObservable()
+    this.cartArraySubscription = this.cartService.cartArray.asObservable()
           .subscribe((_cartArray) => {
             this.cartArray = _cartArray;
           });
+  }
+
+  ngOnDestroy(): void {
+    this.cartArraySubscription.unsubscribe();
   }
 
   /**
@@ -35,9 +41,10 @@ export class CourseComponent implements OnInit{
     );
     
     // Push the course into cartArray if its newly added else increment the noOfItems property of already present item
-    index === -1 ?
-    this.cartArray.push({ 'course': this.course, 'noOfItems': 1 }) :
-    (this.cartArray[index].noOfItems = ++this.cartArray[index].noOfItems);
+    if(index === -1) 
+      this.cartArray.push({ 'course': this.course, 'noOfItems': 1 });
+    else
+      this.cartArray[index].noOfItems = ++this.cartArray[index].noOfItems;
 
     this.cartService.cartArray.next(this.cartArray);
   }

@@ -6,5 +6,5 @@ export interface CourseDetails {
     courseInstructorName: string,
     coursePrice: number,
     backgroundColor: string,
-    tags: string[]
+    tags: number[]
 }

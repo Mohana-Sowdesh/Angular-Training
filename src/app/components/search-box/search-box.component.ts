@@ -8,7 +8,7 @@ import { CoursesDataService } from 'src/app/services/courses-data.service';
   styleUrls: ['./search-box.component.scss']
 })
 export class SearchBoxComponent {
-  public searchInputPlaceholder: string = APP_MESSAGES.SEARCH_INPUT_PLACEHOLDER;
+  readonly searchInputPlaceholder: string = APP_MESSAGES.SEARCH_INPUT_PLACEHOLDER;
   public searchKey: string = '';
 
   constructor(private courseDataService: CoursesDataService) {}

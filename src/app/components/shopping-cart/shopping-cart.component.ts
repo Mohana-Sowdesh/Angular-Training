@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import APP_CONSTANTS from 'src/app/constants/app-constants';
 import APP_MESSAGES from 'src/app/constants/app-messages';
 import { CartArrayElement } from 'src/app/models/cart-array-element.model';
@@ -10,20 +11,25 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./shopping-cart.component.scss']
 })
 
-export class ShoppingCartComponent implements OnInit {
-  public shoppingCartImgPath: string = APP_CONSTANTS.SHOPPING_CART_IMG_PATH;
-  public purchaseMotivationMsg: string = APP_MESSAGES.PURCHASE_MOTIVATION_MSG;
+export class ShoppingCartComponent implements OnInit, OnDestroy {
+  readonly shoppingCartImgPath: string = APP_CONSTANTS.SHOPPING_CART_IMG_PATH;
+  readonly purchaseMotivationMsg: string = APP_MESSAGES.PURCHASE_MOTIVATION_MSG;
   public cartArray: CartArrayElement[] = [];
   public totalItemsInCart: number = 0;
+  public cartArraySubscription !:Subscription;
 
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.cartService.cartArray.asObservable()
+    this.cartArraySubscription = this.cartService.cartArray.asObservable()
           .subscribe((_cartArray) => {
               this.cartArray = _cartArray;
               this.calculateTotalItemsPresent();
           });
+  }
+
+  ngOnDestroy(): void {
+    this.cartArraySubscription.unsubscribe();
   }
 
   /**

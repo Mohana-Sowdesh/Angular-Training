@@ -1,3 +1,5 @@
+$heading-color : #2d2c2c;
+
 .courses-container {
     margin-bottom: 40px;
     width: 100%;
@@ -10,7 +12,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    color: #2d2c2c;
+    color: $heading-color;
 }
 
 .course-heading {
@@ -20,14 +22,9 @@
 
 .slider-navigation-arrow {
     margin: 0 5px;
-    color: #2d2c2c;
+    color: $heading-color;
     font-size: 18px;
     cursor: pointer;
-}
-
-.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
 }
 
 .course-list-container {

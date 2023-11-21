@@ -1,3 +1,5 @@
+@import "../styles.scss";
+
 /* ----------------- START :: Container styles ---------------------- */
 .background-container {
     width: 100%;
@@ -24,6 +26,7 @@
 }
 
 .main-stage-container {
+    @include hide-scrollbar();
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -45,56 +48,8 @@ li-banner {
 li-badge {
     width: 93%;
     margin: 0 40px;
-    // padding: 0 10px;
 }
 
 li-courses-container {
     width: 100%;
-}
-
-/* ----------------- START :: Course styles ---------------------- */
-.courses-container {
-    margin-bottom: 40px;
-    width: 100%;
-    padding: 0 45px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.courses-heading-container {
-    display: flex;
-    justify-content: space-between;
-    color: #2d2c2c;
-}
-
-.course-heading {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
-
-.slider-navigation-arrow {
-    margin: 0 5px;
-    color: #2d2c2c;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.course-list-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-/* ----------------- END :: Course styles ---------------------- */
-
-// Style to hide scrollbar
-::-webkit-scrollbar {
-    display: none;
 }

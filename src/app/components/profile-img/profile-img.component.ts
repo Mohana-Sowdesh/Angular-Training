@@ -8,5 +8,5 @@ import APP_CONSTANTS from 'src/app/constants/app-constants';
 })
 
 export class ProfileImgComponent {
-  public profileImgPath: string = APP_CONSTANTS.PROFILE_IMG_PATH;
+  readonly profileImgPath: string = APP_CONSTANTS.PROFILE_IMG_PATH;
 }

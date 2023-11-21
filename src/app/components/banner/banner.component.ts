@@ -8,5 +8,5 @@ import APP_CONSTANTS from 'src/app/constants/app-constants';
 })
 
 export class BannerComponent{
-  public bannerImgPath: string = APP_CONSTANTS.BANNER_IMG_PATH;
+  readonly bannerImgPath: string = APP_CONSTANTS.BANNER_IMG_PATH;
 }
