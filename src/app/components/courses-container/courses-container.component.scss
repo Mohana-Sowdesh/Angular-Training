@@ -27,6 +27,11 @@ $heading-color : #2d2c2c;
     cursor: pointer;
 }
 
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .course-list-container {
     width: 100%;
     display: flex;
