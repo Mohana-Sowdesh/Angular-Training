@@ -1,0 +1,8 @@
+<div class="shopping-cart">
+    <img [src]='shoppingCartImgPath' alt="shopping cart img" class="shopping-cart-img">
+    <div class="purchased-list-container">
+        <div *ngIf="cartArray.length===0" class="purchase-motivation-message">{{ purchaseMotivationMsg }}</div>
+        <li-card-item *ngFor="let cartElement of cartArray" [purchasedCourseTitle]="cartElement.course.courseTitle" [purchasedNoOfItems]="cartElement.noOfItems"></li-card-item>
+    </div>
+    <div class="shopping-cart-items-count">{{ totalItemsInCart }}</div>
+</div>

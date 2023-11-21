@@ -1,0 +1,31 @@
+.menu-bar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex-wrap: wrap;
+    background-color: rgb(249, 250, 246);
+}
+
+.logo {
+    margin: 20px auto;
+    width: 65%;
+    height: 14%;
+    cursor: pointer;
+}
+
+.menu-list {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(85, 85, 84);
+}
+
+.menu-list > div {
+    margin: 20px 20px 20px 55px;
+    text-transform: capitalize;
+}
+
+.menu-list > div:hover {
+    cursor: pointer;
+    color: rgb(93, 128, 61);
+}

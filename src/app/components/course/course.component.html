@@ -1,0 +1,25 @@
+<div class="course-outer-container" *ngIf="course">
+    <div class="course-image" [ngStyle]="{'background-color': course.backgroundColor}">
+        <img [src]="course.courseImgLink" alt="course image">
+    </div>
+    <div class="course-details-container">
+        <div class="course-title-rating-container">
+            <div class="course-title">{{ course.courseTitle }}</div>
+            <div class="course-rating">
+                <i class="fas fa-star-half-alt star-icon"></i>
+                <div class="rating">{{ course.courseRating }}</div>
+            </div>
+        </div>
+        <div class="course-instructor-price-container">
+            <div class="course-instructor-container">
+                <div class="profile-img">
+                    <img [src]="profileImgPath" alt="profile image">
+                </div>
+                <div class="course-instructor-name">{{ course.courseInstructorName }}</div>
+            </div>
+            <div class="course-price">{{ course.coursePrice | currency:'USD':'symbol': '1.1-1' }}</div>
+        </div>
+        <div class="add-to-cart-btn" (click)="addToCart()">ADD TO CART</div>
+    </div>
+</div>
+

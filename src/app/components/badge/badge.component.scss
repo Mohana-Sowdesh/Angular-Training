@@ -1,0 +1,32 @@
+@import "../../../styles.scss";
+
+.badges-container {
+    @include hide-scrollbar();
+    margin: 20px 0;
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: row;
+    justify-content: flex-start;
+    row-gap: 5px;
+    white-space:nowrap;
+    overflow: scroll;
+}
+
+.badge {
+    margin: 0 15px 0 0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    color: rgb(75, 75, 74);
+    background-color: rgb(244, 245, 239);
+}
+
+.badge:hover, .selected-badge {
+    cursor: pointer;
+    background-color: rgb(199, 214, 182);
+}
+
+// Style to hide scrollbar
+::-webkit-scrollbar {
+    display: none;
+}

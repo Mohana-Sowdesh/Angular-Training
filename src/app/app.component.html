@@ -1,0 +1,16 @@
+<div class="background-container">
+  <!----------------- START :: Inner container ---------------------->
+  <div class="inner-container">
+    <li-side-bar class="side-bar"></li-side-bar>
+    <!----------------- START :: Main stage container ---------------------->
+    <div class="main-stage-container">
+      <li-header [userName]="userName"></li-header>
+      <li-banner></li-banner>
+      <li-badge ></li-badge>
+      <li-courses-container [courseHeading]="trendingCoursesTitle"></li-courses-container>
+      <li-courses-container [courseHeading]="recommendedForYouTitle"></li-courses-container>
+    </div>
+  </div>
+</div>
+<!----------------- END :: Main stage container ---------------------->
+<!----------------- END :: Inner container ---------------------->

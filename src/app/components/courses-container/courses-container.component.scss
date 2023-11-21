@@ -1,0 +1,47 @@
+$heading-color : #2d2c2c;
+
+.courses-container {
+    margin-bottom: 40px;
+    width: 100%;
+    padding: 0 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+.courses-heading-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: $heading-color;
+}
+
+.course-heading {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.slider-navigation-arrow {
+    margin: 0 5px;
+    color: $heading-color;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.course-list-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.no-results-found {
+    margin-bottom: 70px;
+    text-align: center;
+    color: rgb(184, 184, 182);
+}
+

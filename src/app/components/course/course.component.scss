@@ -1,0 +1,125 @@
+.course-outer-container {
+    margin: 10px 10px 0 0;
+    width: 215px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(248, 248, 248);
+    border-radius: 10px;
+    border: 1px solid rgb(242, 242, 242);
+}
+
+/* ----------------- START :: Course image container ---------------------- */
+.course-image {
+    margin: 5px auto 0;
+    width: 195px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(255, 241, 214);
+}
+
+.course-image > img {
+    width: 52px;
+    height: 52px;
+}
+/* ----------------- END :: Course image container ---------------------- */
+/* ----------------- START :: Course details container ---------------------- */
+.course-details-container {
+    width: 210px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ----------------- START :: Course title and rating container ---------------------- */
+.course-title-rating-container {
+    padding: 5px 0;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.course-title {
+    padding-right: 5px;
+    font-size: 14px;
+    color: #4e4e4e;
+    flex-wrap: wrap;
+}
+
+.course-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.star-icon {
+    padding-top: 2px;
+    font-size: 13px;
+    color: rgb(238, 184, 102);
+}
+
+.rating {
+    font-size: 14px;
+    color: rgb(128, 128, 128);
+}
+/* ----------------- END :: Course title and rating container ---------------------- */
+/* ----------------- START :: Course instructor and price container ---------------------- */
+.course-instructor-price-container {
+    padding-top: 5px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.course-instructor-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    padding-top: 3px;
+}
+
+.profile-img > img {
+    width: 20px;
+    height: 20px;
+}
+
+.course-instructor-name {
+    padding-left: 4px;
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(146, 146, 146);
+}
+
+.course-price {
+    padding: 5px 5px;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(104, 136, 76);
+    background-color: rgb(232, 240, 219);
+    border-radius: 5px;
+}
+/* ----------------- END :: Course instructor and price container ---------------------- */
+
+.add-to-cart-btn {
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    background-color: #e2e1e1;
+    color: rgb(14, 16, 12);
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* ----------------- END :: Course details container ---------------------- */
