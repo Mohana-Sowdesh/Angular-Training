@@ -1,0 +1,27 @@
+.side-bar-container {
+    width: 271px;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+lbk-logo {
+    margin: 45px auto;
+}
+
+.heading-filter {
+    font-size: 18px;
+    margin: 370px 0 20px 45px;
+    text-transform: uppercase;
+}
+
+.sidebar-footer {
+    margin: 220px 45px;
+    font-size: 14px;
+
+    & div {
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+}
