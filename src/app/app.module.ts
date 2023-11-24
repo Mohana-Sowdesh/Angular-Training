@@ -8,6 +8,12 @@ import { BlogsMenuComponent } from './components/blogs-menu/blogs-menu.component
 import { ReadBlogAreaComponent } from './components/read-blog-area/read-blog-area.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { TagsWithCheckboxComponent } from './components/tags-with-checkbox/tags-with-checkbox.component';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { BlogPostComponent } from './components/blog-post/blog-post.component';
+import { MemberComponent } from './components/member/member.component';
+import { MembersModalComponent } from './components/members-modal/members-modal.component';
+import { NewBlogModalComponent } from './components/new-blog-modal/new-blog-modal.component';
+import { BlogActionBtnComponent } from './components/blog-action-btn/blog-action-btn.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +23,12 @@ import { TagsWithCheckboxComponent } from './components/tags-with-checkbox/tags-
     ReadBlogAreaComponent,
     LogoComponent,
     TagsWithCheckboxComponent,
+    SearchBoxComponent,
+    BlogPostComponent,
+    MemberComponent,
+    MembersModalComponent,
+    NewBlogModalComponent,
+    BlogActionBtnComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+@import "../../../styles.scss";
+
+.backdrop-filter {
+    @include backdrop-filter;
+}
+
+.view-members-container {
+    @include modal;
+}
+
+/* ----------------- START :: Members container styles ---------------------- */
+.heading-members {
+    margin-bottom: 40px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.members-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* ----------------- END :: Members container styles ---------------------- */

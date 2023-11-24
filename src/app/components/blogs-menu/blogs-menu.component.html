@@ -1,3 +1,16 @@
 <div class="blogs-menu-container">
-     
+    <div class="blogs-header">
+        <lbk-search-box></lbk-search-box>
+        <lbk-blog-action-btn [btnText]="newBtnText" [bgColor]="newBtnBgColor" [fontColor]="newBtnFontColor" (click)="onNewBtnClick()"></lbk-blog-action-btn>
+    </div>
+    <div class="blogs-list-container">
+        <lbk-blog-post></lbk-blog-post>
+        <lbk-blog-post></lbk-blog-post>
+        <lbk-blog-post></lbk-blog-post>
+        <lbk-blog-post></lbk-blog-post>
+        <lbk-blog-post></lbk-blog-post>
+        <lbk-blog-post></lbk-blog-post>
+        <lbk-blog-post></lbk-blog-post>
+    </div>
+    <lbk-new-blog-modal *ngIf="showNewBlogPostModal" [modalHeading]="newBlogPostModalHeading" (closeNewBlogPostModal)="onHandleClick()"></lbk-new-blog-modal>
 </div>

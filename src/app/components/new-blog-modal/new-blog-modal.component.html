@@ -1,0 +1,21 @@
+<div class="backdrop-filter" (click)="onClose()"></div>
+<div class="new-blog-post-container">
+    <div class="add-your-blog-title">{{ modalHeading }}</div>
+    <div class="blog-title-container">
+        <input type="text" [placeholder]="nameYourBlogText">
+    </div>
+    <div class="dropdown-container">
+        <label for="tag" class="dropdown-label">{{ blogTypeDropdownLabel }}</label>
+        <select id="tag" name="tags" class="tags-dropdown">
+            <option value="regional">{{ blogTypes[0] }}</option>
+            <option value="national">{{ blogTypes[1] }}</option>
+            <option value="international">{{ blogTypes[2] }}</option>
+        </select>
+    </div>
+    <textarea name="blog-content" rows="10" cols="30" class="blog-content" [placeholder]="writeContentHere"></textarea>
+    <div class="blog-action-btns-container">
+        <lbk-blog-action-btn [btnText]="cancelBtnText" [bgColor]="cancelBtnBgColor"></lbk-blog-action-btn>
+        <lbk-blog-action-btn [btnText]="addBtnText" [bgColor]="addBtnBgColor" [fontColor]="addBtnFontColor"></lbk-blog-action-btn>
+    </div>
+        
+</div>

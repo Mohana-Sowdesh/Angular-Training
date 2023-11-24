@@ -1,0 +1,7 @@
+<div class="backdrop-filter" (click)="onClose()"></div>
+<div class="view-members-container">
+    <div class="heading-members">{{ memberHeadingText }}</div>
+    <div class="members-list-container">
+        <lbk-member *ngFor="let member of membersDetails" [memberName]="member.name" [memberPlace]="member.address" [gender]="member.gender" [memberPhoto]="member.photo"></lbk-member>
+    </div>
+</div>

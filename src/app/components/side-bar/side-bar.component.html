@@ -1,11 +1,12 @@
 <div class="side-bar-container">
     <lbk-logo></lbk-logo>
     <div class="heading-filter">{{ filterHeading }}</div>
-    <lbk-tags-with-checkbox [checkBoxLabel]="blogType[0]"></lbk-tags-with-checkbox>
-    <lbk-tags-with-checkbox [checkBoxLabel]="blogType[1]"></lbk-tags-with-checkbox>
-    <lbk-tags-with-checkbox [checkBoxLabel]="blogType[2]"></lbk-tags-with-checkbox>
+    <lbk-tags-with-checkbox [checkBoxLabel]="blogType[0].type"></lbk-tags-with-checkbox>
+    <lbk-tags-with-checkbox [checkBoxLabel]="blogType[1].type"></lbk-tags-with-checkbox>
+    <lbk-tags-with-checkbox [checkBoxLabel]="blogType[2].type"></lbk-tags-with-checkbox>
     <div class="sidebar-footer">
-        <div>{{ viewMembersMsg }}</div>
+        <div (click)="onViewMembersClick()">{{ viewMembersMsg }}</div>
         <div>{{ switchModeMsg }}</div>
     </div>
+    <lbk-members-modal *ngIf="showMembersModal" (closeViewMembersModal)="onHandleClick()"></lbk-members-modal>
 </div>

@@ -1,6 +1,21 @@
 export default {
     FILTER_MSG: 'Filter',
-    BLOG_TYPES: ['Regional blogs', 'National blogs', 'International blogs'],
     VIEW_MEMBERS: 'View Members',
-    SWITCH_MODE: 'Switch to Dark Mode'
+    SWITCH_MODE: 'Switch to Dark Mode',
+    SEARCH_BLOGS: 'Search Blogs',
+    MEMBERS_HEADING: 'MEMBERS',
+    ADD_NEW_BLOG: 'Add New Blog',
+    NAME_YOUR_BLOG: 'Name your blog',
+    WRITE_CONTENT_HERE: 'Write Content Here ..',
+    NEW_BUTTON_TEXT: 'New',
+    LITTLE_LOGO_TEXT: 'Little',
+    BOOK_LOGO_TEXT: 'Book',
+    EDIT_CONTENT: 'Edit content',
+    CHOOSE_A_TAG: 'Choose a tag:',
+    BLOG_TYPES: ['Regional', 'National', 'International'],
+    NEW_BTN_BG_COLOR: '#a75ab3',
+    ADD_BUTTON_TEXT: 'Add',
+    CANCEL_BUTTON_TEXT: 'Cancel',
+    CANCEL_BTN_BG_COLOR: '#91f5f6',
+    NEW_BTN_FONT_COLOR: '#fff',
 }
