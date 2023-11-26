@@ -14,6 +14,9 @@ import { MemberComponent } from './components/member/member.component';
 import { MembersModalComponent } from './components/members-modal/members-modal.component';
 import { NewBlogModalComponent } from './components/new-blog-modal/new-blog-modal.component';
 import { BlogActionBtnComponent } from './components/blog-action-btn/blog-action-btn.component';
+import { FormsModule } from '@angular/forms';
+import { SalutationPipe } from './pipes/salutation.pipe';
+import { HighlightBlogDirective } from './directives/highlight-blog.directive';
 
 @NgModule({
   declarations: [
@@ -29,10 +32,13 @@ import { BlogActionBtnComponent } from './components/blog-action-btn/blog-action
     MembersModalComponent,
     NewBlogModalComponent,
     BlogActionBtnComponent,
+    SalutationPipe,
+    HighlightBlogDirective,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

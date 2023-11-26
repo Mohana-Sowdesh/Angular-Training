@@ -48,3 +48,10 @@
       transform: translateX(0);
     }
 }
+
+@mixin button {
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}

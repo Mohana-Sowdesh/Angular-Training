@@ -18,4 +18,9 @@ export default {
     CANCEL_BUTTON_TEXT: 'Cancel',
     CANCEL_BTN_BG_COLOR: '#91f5f6',
     NEW_BTN_FONT_COLOR: '#fff',
+    EDIT_BLOG_MODAL_HEADING: 'Edit Blog',
+    SAVE_EDITTED_CONTENT_BTN_TEXT: 'Save',
+    BLOGS_TEXT_ADDITION_IN_FILTER: ' blogs',
+    NO_RESULT_FOUND: 'No result found',
+    SELECT_A_BLOG: 'Please select a blog from menu to read'
 }

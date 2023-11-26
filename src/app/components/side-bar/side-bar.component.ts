@@ -18,7 +18,7 @@ export class SideBarComponent {
   /**
    * Function to be executed on clicking 'View Members' text
    */
-  onViewMembersClick() {
+  onViewMembersClick(): void {
     this.showMembersModal = true;
   }
 
@@ -26,7 +26,7 @@ export class SideBarComponent {
    * Function to be executed on catching closeViewMembersModal event.
    * Sets the showMembersModal property to false
    */
-  onHandleClick() {
+  onHandleClick(): void {
     this.showMembersModal = false;
   }
 }

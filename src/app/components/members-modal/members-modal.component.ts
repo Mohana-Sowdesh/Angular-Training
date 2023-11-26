@@ -16,7 +16,7 @@ export class MembersModalComponent {
   /**
    * Function to be executed on clicking the backdrop. This will emit an event. 
    */
-  onClose() {
+  onClose(): void {
     this.closeViewMembersModal.emit();
   }
 }

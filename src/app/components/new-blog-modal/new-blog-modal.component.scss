@@ -11,6 +11,7 @@
 .add-your-blog-title {
     margin: 20px 0 60px 0;
     font-size: 22px;
+    text-transform: capitalize;
 }
 
 .blog-title-container {
@@ -50,7 +51,7 @@
 
 .blog-content {
     width: 490px;
-    height: 560px;
+    height: 540px;
     display: block;
     font-size: 20px;
     border: none;
@@ -64,7 +65,7 @@
 }
 
 .blog-action-btns-container {
-    margin-right: 50px;
+    margin: 20px 50px 0 0;
     display: flex;
     justify-content: space-between;
 }

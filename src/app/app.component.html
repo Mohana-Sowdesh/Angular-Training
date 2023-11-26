@@ -1,5 +1,5 @@
 <div class="app-container">
   <lbk-side-bar></lbk-side-bar>
-  <lbk-blogs-menu></lbk-blogs-menu>
-  <lbk-read-blog-area></lbk-read-blog-area>
+  <lbk-blogs-menu (blogIdEmitter)="fetchBlogDetails($event)"></lbk-blogs-menu>
+  <lbk-read-blog-area [blogToDisplay]="blogToDisplay"></lbk-read-blog-area>
 </div>
