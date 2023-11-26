@@ -1,0 +1,17 @@
+<div class="blogs-menu-container">
+    <div class="blogs-header">
+        <lbk-search-box></lbk-search-box>
+        <lbk-blog-action-btn [btnText]="newBtnText" [bgColor]="newBtnBgColor" 
+            [fontColor]="newBtnFontColor" (click)="onNewBtnClick()">
+        </lbk-blog-action-btn>
+    </div>
+    <div class="blogs-list-container" *ngIf="blogsToDisplay.length > 0">
+        <lbk-blog-post *ngFor="let blog of blogsToDisplay" [blog]="blog" [highlightedBlogId]="highlightedBlogId"
+            (click)="onPostClick(blog)">
+        </lbk-blog-post>
+    </div>
+    <div class="no-result-found" *ngIf="blogsToDisplay.length === 0">
+       {{ noResultFound }}
+    </div>
+    <lbk-new-blog-modal *ngIf="showNewBlogPostModal" [modalHeading]="newBlogPostModalHeading" [actionBtnText]="addBtnText" (closeNewBlogPostModal)="onHandleClick()"></lbk-new-blog-modal>
+</div>

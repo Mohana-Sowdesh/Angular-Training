@@ -1,0 +1,42 @@
+.tag-with-checkbox-container {
+    margin: 0 0 15px 45px;
+    display: flex;
+    align-items: center;
+}
+
+/* ----------------- START :: Checkbox styles ---------------------- */
+.checkbox-unclicked {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(188, 133, 196);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox-clicked {
+    background-color: rgb(167, 90, 178);
+}
+/* ----------------- END :: Checkbox styles ---------------------- */
+
+.label {
+    padding-left: 7px;
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+/* ----------------- START :: Tick mark styles ---------------------- */
+.tick-mark {
+    color: #fff;
+    font-size: 10px;
+    visibility: hidden;
+}
+
+.tick-visible {
+    visibility: initial;
+}
+/* ----------------- END :: Tick mark styles ---------------------- */
+

@@ -1,0 +1,6 @@
+<div class="tag-with-checkbox-container">
+    <div class="checkbox-unclicked" (click)="onCheckboxClicked()" [ngClass]="{ 'checkbox-clicked': checkBoxClicked }">
+        <i class="far fa-check tick-mark" [ngClass]="{ 'tick-visible' : checkBoxClicked }"></i>
+    </div>
+    <div class="label">{{ checkBoxLabel + blogsText }}</div>
+</div>

@@ -1,0 +1,75 @@
+@import "../../../styles.scss";
+
+.backdrop-filter {
+    @include backdrop-filter;
+}
+
+.new-blog-post-container {
+    @include modal;
+}
+
+.add-your-blog-title {
+    margin: 20px 0 60px 0;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.blog-title-container {
+    input {
+        width: 490px;
+        font-size: 32px;
+        border: none;
+        outline: none;
+    }
+
+    ::placeholder {
+        color: rgb(212, 212, 212);
+        font-weight: 300;
+    }   
+}
+
+.dropdown-container {
+    margin: 30px 10px 30px 0; 
+}
+
+.dropdown-label {
+    padding-right: 15px;
+    font-size: 22px;
+    font-weight: 300;
+    color: rgb(212, 212, 212);
+}
+
+.tags-dropdown {
+    padding: 10px 20px 10px 10px;
+    width: 180px;
+    height: 50px;
+    border: solid 1px #969595;
+    background-color: #f7f7f7;
+    font-size: 16px;
+    outline: none;
+}
+
+.blog-content {
+    width: 490px;
+    height: 540px;
+    display: block;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    resize: none;
+
+    &::placeholder {
+        color: rgb(212, 212, 212);
+        font-weight: 300;
+    } 
+}
+
+.blog-action-btns-container {
+    margin: 20px 50px 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+

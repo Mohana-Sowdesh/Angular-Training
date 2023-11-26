@@ -1,0 +1,33 @@
+.blogs-menu-container {
+    width: 584px;
+    height: 100vh;
+    background-color: var(--blog-menu-bgcolor);
+    display: flex;
+    flex-direction: column;
+}
+
+.blogs-header {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+}
+
+lbk-search-box {
+    width: 100%;
+}
+
+lbk-blog-action-btn {
+    margin: 40px 30px 30px 0;
+}
+
+.blogs-list-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: scroll;
+}
+
+.no-result-found {
+    margin: auto;
+}
+

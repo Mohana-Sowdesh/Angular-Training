@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Slab', serif;  
+}
+
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --logo-book-color: #b26ebc;
+  --blog-menu-bgcolor: #f5f6fa;
+  --blog-post-container-bgcolor: #102a44;
+  --selected-blog-post-container-bgcolor: #a7e0f2;
+  --search-box-bgcolor: #ebebf3;
+}
+
+.light-theme {
+  --background-color: #fff;
+  --text-color: #000;
+  --logo-book-color: #b26ebc;
+  --blog-menu-bgcolor: #f5f6fa;
+  --blog-post-container-bgcolor: #fff;
+  --selected-blog-post-container-bgcolor: #a7e0f2;
+  --search-box-bgcolor: #ebebf3;
+}
+
+.dark-theme {
+  --background-color: #0a1c2d;
+  --text-color: #fff;
+  --logo-book-color: #fff;
+  --blog-menu-bgcolor: #000;
+  --blog-post-container-bgcolor: #102a44;
+  --selected-blog-post-container-bgcolor: #081828;
+  --search-box-bgcolor: #0a1c2d;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+@mixin backdrop-filter {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 50;
+    cursor: pointer;
+}
+
+@mixin modal {
+    padding: 60px 0px 0 60px;
+    position: fixed;
+    top: 0;
+    left: 65vw;
+    width: 35vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 51;
+    animation: slideIn 0.3s ease-in forwards;
+}
+
+// Code for animation 
+@keyframes slideIn {
+    0% {
+      transform: translateX(750px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@mixin button {
+  font-family: 'IBM Plex Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}

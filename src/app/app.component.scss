@@ -1,0 +1,11 @@
+.app-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+lbk-side-bar, lbk-blogs-menu, lbk-read-blog-area {
+    width: 100%;
+}

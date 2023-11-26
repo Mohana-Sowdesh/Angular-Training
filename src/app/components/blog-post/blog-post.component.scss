@@ -1,0 +1,42 @@
+.blog-post {
+    margin: 0 auto 20px auto;
+    padding: 0 35px;
+    width: 510px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blog-post-container-bgcolor);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.blog-post:hover {
+    background-color: var(--selected-blog-post-container-bgcolor);
+}
+
+.title {
+    max-width: 434px;
+    margin: 30px 0 10px 0;
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.blog-tag {
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: rgb(175, 102, 186);
+    text-transform: uppercase;
+}
+
+.blog-min-content {
+    max-height: 62px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

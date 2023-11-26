@@ -1,0 +1,24 @@
+<div class="read-blog-area-container" *ngIf="blogToDisplay">
+  <div class="image-container">
+    <img
+      [src]="readBlogImgPath"
+      alt="blog post image"
+    />
+  </div>
+  <div class="blog-heading">{{ blogToDisplay.title }}</div>
+  <div class="blog-content">
+   {{ blogToDisplay.details }}
+  </div>
+  <div class="edit-content-btn" (click)="onEditContentBtnClick()">{{ editContentBtnText }}</div>
+  <lbk-new-blog-modal *ngIf="showEditBlogPostModal" [modalHeading]="editBlogPostModalHeading" 
+      [actionBtnText]="saveBtnText" [blogToDisplay]="blogToDisplay" (closeNewBlogPostModal)="onHandleClick()"></lbk-new-blog-modal>
+</div>
+<div class="read-blog-area-container select-a-blog-text" *ngIf="!blogToDisplay">
+  <div class="image-container">
+    <img
+      [src]="chooseBlogToReadImgPath"
+      alt="blog post image"
+    />
+  </div>
+  {{ selectBlogText }}
+</div>

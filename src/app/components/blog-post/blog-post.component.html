@@ -1,0 +1,6 @@
+<div class="blog-post" [ngStyle]="{ 'background-color': blog.id === highlightedBlogId ? blogSelectedColour : blogUnselectedColour }" 
+  lbkHighlightBlog [highlightedBlogId]="highlightedBlogId" [blogId]="blog.id">
+  <div class="title">{{ blog.title }}</div>
+  <div class="blog-tag">{{ blog.type }}</div>
+  <div class="blog-min-content">{{ blog.details }}</div>
+</div>
