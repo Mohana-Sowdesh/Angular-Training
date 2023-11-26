@@ -8,12 +8,38 @@
     font-family: 'Roboto Slab', serif;  
 }
 
-.light {
- 
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --logo-book-color: #b26ebc;
+  --blog-menu-bgcolor: #f5f6fa;
+  --blog-post-container-bgcolor: #102a44;
+  --selected-blog-post-container-bgcolor: #a7e0f2;
+  --search-box-bgcolor: #ebebf3;
 }
 
-.dark {
- 
+.light-theme {
+  --background-color: #fff;
+  --text-color: #000;
+  --logo-book-color: #b26ebc;
+  --blog-menu-bgcolor: #f5f6fa;
+  --blog-post-container-bgcolor: #fff;
+  --selected-blog-post-container-bgcolor: #a7e0f2;
+  --search-box-bgcolor: #ebebf3;
+}
+
+.dark-theme {
+  --background-color: #0a1c2d;
+  --text-color: #fff;
+  --logo-book-color: #fff;
+  --blog-menu-bgcolor: #000;
+  --blog-post-container-bgcolor: #102a44;
+  --selected-blog-post-container-bgcolor: #081828;
+  --search-box-bgcolor: #0a1c2d;
+}
+
+body {
+  background-color: var(--background-color);
 }
 
 @mixin backdrop-filter {
@@ -36,7 +62,7 @@
     height: 100vh;
     background-color: white;
     z-index: 51;
-    animation: slideIn 0.5s ease-in forwards;
+    animation: slideIn 0.3s ease-in forwards;
 }
 
 // Code for animation 

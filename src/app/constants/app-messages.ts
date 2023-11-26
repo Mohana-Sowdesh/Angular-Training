@@ -1,7 +1,8 @@
 export default {
     FILTER_MSG: 'Filter',
     VIEW_MEMBERS: 'View Members',
-    SWITCH_MODE: 'Switch to Dark Mode',
+    SWITCH_TO_DARK_MODE: 'Switch to Dark Mode',
+    SWITCH_TO_LIGHT_MODE: 'Switch to Light Mode',
     SEARCH_BLOGS: 'Search Blogs',
     MEMBERS_HEADING: 'MEMBERS',
     ADD_NEW_BLOG: 'Add New Blog',
@@ -20,7 +21,7 @@ export default {
     NEW_BTN_FONT_COLOR: '#fff',
     EDIT_BLOG_MODAL_HEADING: 'Edit Blog',
     SAVE_EDITTED_CONTENT_BTN_TEXT: 'Save',
-    BLOGS_TEXT_ADDITION_IN_FILTER: ' blogs',
+    BLOGS_TEXT_ADDITION_IN_FILTER: ' Blogs',
     NO_RESULT_FOUND: 'No result found',
     SELECT_A_BLOG: 'Please select a blog from menu to read'
 }

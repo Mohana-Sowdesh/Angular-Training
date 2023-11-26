@@ -1,10 +1,14 @@
+@import '../../../styles.scss';
+
 .logo {
     font-size: 1.7rem;
     font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--text-color);
 }
 
 .title-little {
     padding-right: 7px;
     font-weight: normal;
-    color: rgb(178, 110, 188);
+    color: var(--logo-book-color);
 }

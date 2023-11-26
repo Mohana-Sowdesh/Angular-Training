@@ -5,14 +5,13 @@
     height: 180px;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: var(--blog-post-container-bgcolor);
     border-radius: 15px;
-    box-shadow: 0 2px rgba(231, 232, 235, 0.45);
     cursor: pointer;
 }
 
 .blog-post:hover {
-    background-color: '#a7e0f2';
+    background-color: var(--selected-blog-post-container-bgcolor);
 }
 
 .title {

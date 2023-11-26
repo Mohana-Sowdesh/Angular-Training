@@ -1,7 +1,7 @@
 .side-bar-container {
     width: 271px;
     height: 100vh;
-    background-color: white;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
 }
@@ -12,16 +12,20 @@ lbk-logo {
 
 .heading-filter {
     font-size: 18px;
-    margin: 370px 0 20px 45px;
+    margin: 310px 0 20px 45px;
+    font-family: 'IBM Plex Sans', sans-serif;
     text-transform: uppercase;
+    color: var(--text-color);
 }
 
 .sidebar-footer {
-    margin: 220px 45px;
+    margin: 280px 45px;
     font-size: 14px;
+    color: var(--text-color);
 
     & div {
         margin-bottom: 10px;
+        font-family: 'IBM Plex Sans', sans-serif;
         cursor: pointer;
     }
 }

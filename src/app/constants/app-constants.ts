@@ -133,8 +133,10 @@ export default {
           "gender": "Male"
         }
       ],
-  BLOG_HIGHLIGHT_COLOUR: '#a7e0f2',
-  BLOG_POST_MENU_DEFAULT_COLOUR: '#fff',   
+  BLOG_HIGHLIGHT_COLOUR_LIGHT_THEME: '#a7e0f2',
+  BLOG_POST_MENU_DEFAULT_COLOUR_LIGHT_THEME: '#fff',   
+  BLOG_HIGHLIGHT_COLOUR_DARK_THEME: '#081828',
+  BLOG_POST_MENU_DEFAULT_COLOUR_DARK_THEME: '#102a44',
   READ_BLOG_IMG_PATH: '../../../assets/images/LittleBookImg1.jpeg',
   CHOOSE_BLOG_TO_READ_IMG_PATH: '../../../assets/images/read-img.avif',
 }

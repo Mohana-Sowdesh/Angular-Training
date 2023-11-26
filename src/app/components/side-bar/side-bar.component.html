@@ -4,7 +4,7 @@
     <lbk-tags-with-checkbox *ngFor="let blog of blogType" [checkBoxLabel]="blog.type"></lbk-tags-with-checkbox>
     <div class="sidebar-footer">
         <div (click)="onViewMembersClick()">{{ viewMembersMsg }}</div>
-        <div>{{ switchModeMsg }}</div>
+        <div (click)="toggleTheme()">{{ switchModeMsg }}</div>
     </div>
     <lbk-members-modal *ngIf="showMembersModal" (closeViewMembersModal)="onHandleClick()"></lbk-members-modal>
 </div>

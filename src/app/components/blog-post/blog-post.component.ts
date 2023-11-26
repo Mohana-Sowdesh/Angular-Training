@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BlogData } from 'src/app/models/blog-data.model';
 import APP_CONSTANTS from '../../constants/app-constants';
+import { ThemeConfigService } from 'src/app/services/theme-config.service';
 
 @Component({
   selector: 'lbk-blog-post',
@@ -10,6 +11,6 @@ import APP_CONSTANTS from '../../constants/app-constants';
 export class BlogPostComponent {
   @Input() blog!: BlogData;
   @Input() highlightedBlogId!: number;
-  readonly blogSelectedColour: string = APP_CONSTANTS.BLOG_HIGHLIGHT_COLOUR;
-  readonly blogUnselectedColour: string = APP_CONSTANTS.BLOG_POST_MENU_DEFAULT_COLOUR;
+  public blogSelectedColour: string = APP_CONSTANTS.BLOG_HIGHLIGHT_COLOUR_LIGHT_THEME;
+  public blogUnselectedColour: string = APP_CONSTANTS.BLOG_POST_MENU_DEFAULT_COLOUR_LIGHT_THEME;
 }
